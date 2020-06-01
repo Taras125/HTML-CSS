@@ -3,30 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans|Raleway:300,400,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans|Raleway:300,400,700,700i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <meta name="viewport" content="width = divice-width,initial-scale =1">
+    <meta name="viewport" content="width=divice-width,initial-scale =1">
+    <meta name="description" content="site description">
+    <meta name="google" content="notranslate" />
+    <!-- Favicon icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+    <link rel="manifest" href="img/fav/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <title>My first site</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <!---Header--->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
                 <div class="header__logo">
                     <a href="#"><img class="logo" src="img/logo/2.png" alt="logo"></a>
                 </div>
-                <nav class="nav">
-                    <a class="nav__links" href="#">Futers</a>
-                    <a class="nav__links" href="#">Works</a>
-                    <a class="nav__links" href="#">Aur Team</a>
-                    <a class="nav__links" href="#">Testimonials</a>
-                    <a class="nav__links" href="#">Download</a>
+                <nav class="nav" id="nav">
+                    <a class="nav__links" href="#" data-scroll="#features">Futers</a>
+                    <a class="nav__links" href="#" data-scroll="#works">Works</a>
+                    <a class="nav__links" href="#" data-scroll="#team">Our Team</a>
+                    <a class="nav__links" href="#" data-scroll="#reviews">Testimonials</a>
+                    <a class="nav__links" href="#" data-scroll="#download">Download</a>
                 </nav>
-
-                <button class="burger" type="button">
+                <button class="burger" type="button" id="navToggle">
                     <span class="burger__item">Menu</span>
                 </button>
             </div>
@@ -34,7 +45,7 @@
     </header>
 
     <!---Intro--->
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="container">
             <div class="intro__inner">
                 <h1 class="intro__title">Champions are not in the gyms.
@@ -51,7 +62,7 @@
     </div>
 
     <!---Features--->
-    <div class="container">
+    <div class="container" id="features">
         <div class="features">
             <div class="features__item">
                 <img class="featurec__icon" src="img/icon/1.png" alt="icon">
@@ -111,7 +122,7 @@
     </div>
 
     <!-- Works -->
-    <div class="works">
+    <div class="works" id="works">
         <div class="works__item">
             <img class="works__img" src="img/jobimg/1.jpg" alt="img">
             <div class="works__content">
@@ -171,7 +182,7 @@
     </div>
 
     <!-- Team -->
-    <div class="team">
+    <div class="team" id="team">
         <div class="container">
             <div class="team__inner">
 
@@ -387,19 +398,55 @@
     </div>
 
     <!--Reviews -->
-    <div class="reviews">
+    <div class="reviews" id="reviews">
         <div class="container">
-            <div class="reviews__item">
-                <div class="reviews__foto">
-                    <img class="reviews__img" src="img/reviews/rev1.jpg" alt="">
-                </div>
-                <div class="reviews__content">
-                    <div class="reviews__text">
-                        Nothing depletes and destroys the
-                        human body like physical inaction.
+            <div class="reviews__slider" id="reviewsSlider">
+                <div class="slick-item">
+                    <div class="reviews__item">
+                        <div class="reviews__foto">
+                            <img class="reviews__img" src="img/reviews/rev1.jpg" alt="img">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">
+                                Nothing depletes and destroys the
+                                human body like physical inaction.
+                            </div>
+                            <div class="reviews__author">
+                                Aristotle
+                            </div>
+                        </div>
                     </div>
-                    <div class="reviews__author">
-                        Aristotle
+                </div>
+                <div class="slick-item">
+                    <div class="reviews__item">
+                        <div class="reviews__foto">
+                            <img class="reviews__img" src="img/reviews/rev2.jpg" alt="img">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">
+                                Victory does not give strength.Struggle gives 
+                                strength,if you fight and do not give up,it is strength.
+                            </div>
+                            <div class="reviews__author">
+                                Arnold Schwarzenegger
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slick-item">
+                    <div class="reviews__item">
+                        <div class="reviews__foto">
+                            <img class="reviews__img" src="img/reviews/rev3.jpg" alt="img">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">
+                               God has given you a body that can endure almost anything!
+                               Your task - to convince your mind!
+                            </div>
+                            <div class="reviews__author">
+                                Michael Phelps
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -407,7 +454,7 @@
     </div>
 
     <!--Download -->
-    <div class="download">
+    <div class="download" id="download">
         <div class="container">
             <h3 class="download__title">
                 Are You Ready to Start? Download Now For Free!
@@ -466,5 +513,9 @@
             </div>
         </div>
     </footer>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
